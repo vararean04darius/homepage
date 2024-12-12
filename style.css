@@ -1,0 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100vw;
+    min-height: 25em;
+    height: auto;
+    background-color: darkslateblue;
+}
