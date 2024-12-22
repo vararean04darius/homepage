@@ -5,6 +5,7 @@ console.log("hello!");
 const myGrid = document.getElementById("grid");
 
 let myProjects = ["first", "second", "third", "fourth", "fifth", "sixth"];
+let descriptons = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam, molestias, unde quis incidunt quam culpa officia qui.";
 
 for(let i = 0; i<6; i++) {
     const square = document.createElement("div")
@@ -24,12 +25,42 @@ for(let i = 0; i<6; i++) {
 
     const projectDescription = document.createElement("div")
     projectDescription.classList.add("project-description")
+
+    const titleContainer = document.createElement("div")
+    titleContainer.classList.add("project-title-container")
+
+    const iconContainer = document.createElement("div")
+    iconContainer.classList.add("icon-container")
+
+    const firstIcon = document.createElement("img")
+    firstIcon.classList.add("title-icons")
+    firstIcon.src = "./github-original.svg"
+    const secondIcon = document.createElement("img")
+    secondIcon.classList.add("title-icons")
+    secondIcon.src = "newtab.svg"
+    
+    iconContainer.appendChild(firstIcon)
+    iconContainer.appendChild(secondIcon)
+
     cardWrapper.appendChild(pictureDiv)
     cardWrapper.appendChild(projectDescription)
 
     const projectTitle = document.createElement("p")
     projectTitle.classList.add("project-title")
     projectTitle.textContent = myProjects[i];
-    projectDescription.appendChild(projectTitle);
+    titleContainer.appendChild(projectTitle)
+    titleContainer.appendChild(iconContainer);
 
+    const textDescriptionContainer = document.createElement("div")
+    textDescriptionContainer.classList.add("description-container")
+
+    projectDescription.appendChild(titleContainer);
+    projectDescription.appendChild(textDescriptionContainer);
+
+
+    const descriptionMessage = document.createElement("p")
+    descriptionMessage.classList.add("description-message")
+    descriptionMessage.textContent = descriptons;
+
+    textDescriptionContainer.appendChild(descriptionMessage)
 }

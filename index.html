@@ -5,30 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
     <div id="container">
-        <div id="about-wrapper">
+        <div id="about-section">
             <div id="diagonal"></div>
             <div id="about-me-container">
-                <img id="top-picture" src="top-square.jpg">
-                <div id="description-wrapper">
-                    <div id="description-content-wrapper">    
-                        <h1 id="title">Hello world!</h1>
-                        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fugiat ipsa minima non obcaecati maiores enim libero sunt aspernatur et optio quidem possimus consequatur dolores voluptates, doloremque voluptatem. Aperiam, harum?
-                        </p>
+                <div id="top-picture-container">
+                    <img id="top-picture" src="top-square.jpg">
+                    <p id="name">Johnny O'Connor</p>
+                </div>
+                <div id="description-container">
+                    <h1 id="title">Hello world!</h1>
+                    <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fugiat ipsa minima non obcaecati maiores enim libero sunt aspernatur et optio quidem possimus consequatur dolores voluptates, doloremque voluptatem. Aperiam, harum?
+                    </p>
+                    <div id="icons-container">
+                        <img id="facebook-original" src="facebook-original.svg" />
+                        <img id="twitter-original" src="twitter-original.svg" />
+                        <img id="linkedin-plain" src="linkedin-plain.svg" />
                     </div>
                 </div>
             </div>
         </div>
-        <div id="my-work-wrapper">
+        <div id="my-work-section">
             <div id="work-container">
                 <h2 id="work-title">My work</h2>
                 <div id="grid"></div>
             </div>
         </div>
-        <div id="contact-wrapper">
+        <div id="contact-section">
+            <div id="contact-wrapper">
+                <div id="contact-info">
+                    <img src="bot-landscape.jpg" id="bot-picture">
 
+                    <h3>Contact me</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <p>feeba avenue <br> paythebills, ending 76</p>
+                    <div class="content-wrapper">
+                        <img class="icon" src="phone.svg">
+                        <p>555-555-5555</p>
+                    </div>
+                    <div class="content-wrapper">
+                        <img class="icon" src="email.svg">
+                        <p>some.mail.that.does.not.exist@gmail.com</p>
+                    </div>
+                    <img class="large-icon" src="github-original-black.svg" />
+                    <img class="large-icon" src="linkedin-plain-black.svg" />
+                    <img class="large-icon" src="facebook-original-black.svg" />
+                </div>
+            </div>
         </div>
     </div>
     <script src="layout.js"></script>
