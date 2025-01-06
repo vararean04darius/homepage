@@ -1,66 +1,65 @@
-
 console.log("hello!");
 // Photo by Mark Rz: https://www.pexels.com/photo/hooded-woman-in-a-neon-mask-from-movie-15104697/
 // Photo by NEONROOKIE SAUERLAND: https://www.pexels.com/photo/person-wearing-purge-mask-surrounded-with-orange-smoke-6677772/
 const myGrid = document.getElementById("grid");
 
 let myProjects = ["first", "second", "third", "fourth", "fifth", "sixth"];
-let descriptons = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam, molestias, unde quis incidunt quam culpa officia qui.";
+let descriptons =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam, molestias, unde quis incidunt quam culpa officia qui.";
 
-for(let i = 0; i<6; i++) {
-    const square = document.createElement("div")
-    square.classList.add("card")
-    myGrid.appendChild(square);
+for (let i = 0; i < 6; i++) {
+  const square = document.createElement("div");
+  square.classList.add("card");
+  myGrid.appendChild(square);
 
-    const cardWrapper = document.createElement("div")
-    cardWrapper.classList.add("card-wrapper")
-    square.appendChild(cardWrapper)
+  const cardWrapper = document.createElement("div");
+  cardWrapper.classList.add("card-wrapper");
+  square.appendChild(cardWrapper);
 
-    const pictureDiv = document.createElement("div")
-    pictureDiv.classList.add("picture")
-    const ss = document.createElement("p")
-    ss.textContent = "screenshot of project";
-    ss.classList = "filler-text"
-    pictureDiv.appendChild(ss)
+  const pictureDiv = document.createElement("div");
+  pictureDiv.classList.add("picture");
+  const ss = document.createElement("p");
+  ss.textContent = "screenshot of project";
+  ss.classList = "filler-text";
+  pictureDiv.appendChild(ss);
 
-    const projectDescription = document.createElement("div")
-    projectDescription.classList.add("project-description")
+  const projectDescription = document.createElement("div");
+  projectDescription.classList.add("project-description");
 
-    const titleContainer = document.createElement("div")
-    titleContainer.classList.add("project-title-container")
+  const titleContainer = document.createElement("div");
+  titleContainer.classList.add("project-title-container");
 
-    const iconContainer = document.createElement("div")
-    iconContainer.classList.add("icon-container")
+  const iconContainer = document.createElement("div");
+  iconContainer.classList.add("icon-container");
 
-    const firstIcon = document.createElement("img")
-    firstIcon.classList.add("title-icons")
-    firstIcon.src = "./github-original.svg"
-    const secondIcon = document.createElement("img")
-    secondIcon.classList.add("title-icons")
-    secondIcon.src = "newtab.svg"
-    
-    iconContainer.appendChild(firstIcon)
-    iconContainer.appendChild(secondIcon)
+  const firstIcon = document.createElement("img");
+  firstIcon.classList.add("title-icons");
+  firstIcon.src = "./github-original.svg";
+  const secondIcon = document.createElement("img");
+  secondIcon.classList.add("title-icons");
+  secondIcon.src = "newtab.svg";
 
-    cardWrapper.appendChild(pictureDiv)
-    cardWrapper.appendChild(projectDescription)
+  iconContainer.appendChild(firstIcon);
+  iconContainer.appendChild(secondIcon);
 
-    const projectTitle = document.createElement("p")
-    projectTitle.classList.add("project-title")
-    projectTitle.textContent = myProjects[i];
-    titleContainer.appendChild(projectTitle)
-    titleContainer.appendChild(iconContainer);
+  cardWrapper.appendChild(pictureDiv);
+  cardWrapper.appendChild(projectDescription);
 
-    const textDescriptionContainer = document.createElement("div")
-    textDescriptionContainer.classList.add("description-container")
+  const projectTitle = document.createElement("p");
+  projectTitle.classList.add("project-title");
+  projectTitle.textContent = myProjects[i];
+  titleContainer.appendChild(projectTitle);
+  titleContainer.appendChild(iconContainer);
 
-    projectDescription.appendChild(titleContainer);
-    projectDescription.appendChild(textDescriptionContainer);
+  const textDescriptionContainer = document.createElement("div");
+  textDescriptionContainer.classList.add("description-container");
 
+  projectDescription.appendChild(titleContainer);
+  projectDescription.appendChild(textDescriptionContainer);
 
-    const descriptionMessage = document.createElement("p")
-    descriptionMessage.classList.add("description-message")
-    descriptionMessage.textContent = descriptons;
+  const descriptionMessage = document.createElement("p");
+  descriptionMessage.classList.add("description-message");
+  descriptionMessage.textContent = descriptons;
 
-    textDescriptionContainer.appendChild(descriptionMessage)
+  textDescriptionContainer.appendChild(descriptionMessage);
 }
