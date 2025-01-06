@@ -1,4 +1,5 @@
-console.log("hello!");
+console.log("Left to do: change from 'picture' to 'img' with srcset");
+console.log("Left to do: modify the pictures to actual pictures and project titles and descriptions");
 // Photo by Mark Rz: https://www.pexels.com/photo/hooded-woman-in-a-neon-mask-from-movie-15104697/
 // Photo by NEONROOKIE SAUERLAND: https://www.pexels.com/photo/person-wearing-purge-mask-surrounded-with-orange-smoke-6677772/
 const myGrid = document.getElementById("grid");
