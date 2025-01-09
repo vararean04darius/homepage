@@ -1,10 +1,9 @@
-console.log("Left to do: change from 'picture' to 'img' with srcset");
-console.log("Left to do: modify the pictures to actual pictures and project titles and descriptions");
 // Photo by Mark Rz: https://www.pexels.com/photo/hooded-woman-in-a-neon-mask-from-movie-15104697/
 // Photo by NEONROOKIE SAUERLAND: https://www.pexels.com/photo/person-wearing-purge-mask-surrounded-with-orange-smoke-6677772/
 const myGrid = document.getElementById("grid");
 
-let myProjects = ["first", "second", "third", "fourth", "fifth", "sixth"];
+let myProjects = ["admin", "battleship", "calculator", "pizzeria", "signup", "weather"];
+let myPictures = ["./admin.png", "./battleship.png", "./calculator.png", "./pizzeria.png", "./signup.png", "./weather.png"];
 let descriptons =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam, molestias, unde quis incidunt quam culpa officia qui.";
 
@@ -19,10 +18,7 @@ for (let i = 0; i < 6; i++) {
 
   const pictureDiv = document.createElement("div");
   pictureDiv.classList.add("picture");
-  const ss = document.createElement("p");
-  ss.textContent = "screenshot of project";
-  ss.classList = "filler-text";
-  pictureDiv.appendChild(ss);
+  pictureDiv.style.background = `url(${myPictures[i]}) no-repeat center`;
 
   const projectDescription = document.createElement("div");
   projectDescription.classList.add("project-description");

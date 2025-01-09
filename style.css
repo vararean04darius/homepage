@@ -15,6 +15,7 @@ html, body {
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: hidden;
+    scroll-behavior: smooth
 }
 
 #about-section {
@@ -57,18 +58,13 @@ html, body {
 }
 
 #top-picture-container {
-    /* display: block; */
     position: relative;
     width: 800px;
-    /* height: 600px; */
     float: left;
-    /* margin-right: -5rem; */
-    /* margin-bottom: -5rem; */
-    /* margin-top: -5rem; */
     margin-top: -3rem;
     margin-right: 3rem; 
+    margin-left: -3rem;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 }
 
@@ -82,9 +78,11 @@ html, body {
     position: absolute;
     z-index: 1;
     color: white;
-    bottom: 1rem;
-    font-size: 72px;
     margin: 0;
+    bottom: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 72px;
 }
 
 #description-container {
@@ -101,6 +99,7 @@ html, body {
     margin-right: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 54px;
+    text-align: center;
 }
 
 #description {
@@ -115,7 +114,6 @@ html, body {
 
 #icons-container {
     margin-top: 6rem;
-    margin-right: -1rem;
 }
 
 #facebook-original {
@@ -192,6 +190,7 @@ html, body {
 .picture {
     height: 375px;
     width: 100%;
+    overflow: hidden;
     background-color: darkslateblue;
     display: flex;
     align-items: center;
@@ -333,18 +332,37 @@ html, body {
     margin-left: 2rem;
 }
 
-@media (500px < width <= 1500px) {
+@media (width < 1601px) {
+    #bot-picture {
+        width: 500px;
+    }
+}
+
+@media (width < 1400px) {
+    #top-picture-container {
+        width: 600px;
+        height: 600px;
+    }
+    #top-picture {
+        width: 600px;
+    }
+}
+
+@media (width < 1000px) {
     #icons-container {
         display: none;
     }
     #about-section {
+        margin: 0;
         margin-top: 4rem;
+        margin-right: 3rem;
+        margin-left: 3rem;
     }
     #top-picture-container {
         height: 500px;
         width: 500px;
         margin: 0;
-        margin-left: -4rem;
+        margin-left: -2rem;
         margin-top: -5rem;
         margin-right: 2rem;
     }
@@ -359,7 +377,8 @@ html, body {
     }
     #name {
         top: 0;
-        margin-right: -35rem;
+        margin-left: 3em;
+        margin-right: -5em;
     }
     #my-work-section {
         margin-left: 6rem;
@@ -424,7 +443,21 @@ html, body {
     }
 }
 
-@media (width < 500px) {
+@media (width < 850px) {
+    #contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #bot-picture {
+        margin: 0;
+        min-width: 250px;
+        max-width: 80vw;
+    }
+}
+
+@media (width < 700px) {
     #diagonal {
         transform: skewY(-25deg) translateX(-25%) translateY(-85%) scaleY(180%);
     }
@@ -442,18 +475,23 @@ html, body {
     }
     #top-picture-container {
         width: 85vw;
+        height: auto;
         margin: 0;
-        margin-top: 2em;
     }
     #top-picture{
         width: 100%;
     }
     #name {
+        margin: 0;
         text-align: start;
         margin-left: 1rem;
+        margin-right: 6rem;
+        top: auto;
+        bottom: 0;
     }
     #description-container {
         margin: 0;
+        margin-top: 5em;
         padding: 0;
         background-color: transparent;
         display: flex;
@@ -478,13 +516,15 @@ html, body {
         float: none;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-content: center;
         justify-content: center;
+        gap: 2rem;
     }
     #icons-container > img {
         float: none;
         height: 30px;
-        margin-right: 1.5rem;
+        width: 30px;
+        margin: 0;
     }
     #my-work-section {
         margin: 0;
@@ -525,12 +565,6 @@ html, body {
         font-size: 18px;
         margin-bottom: 2rem;
     }
-
-
-
-
-
-
     #contact-section {
         padding-bottom: 0;
         margin: 0;
@@ -565,11 +599,31 @@ html, body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        gap: 1rem;
+    }
+    .large-icon {
+        margin: 0;
     }
     #bot-picture{
         margin: 0;
         margin-top: 2rem;
         width: 100vw;
         margin-bottom: -1rem;
+        max-width: 100vw;
+    }
+}
+
+@media (width < 380px ) {
+    #name { 
+        font-size: 42px;
+    }
+    .contact-title {
+        font-size: 42px;
+    }
+    #contact-details {
+        font-size: 24px;
+    }
+    #grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
     }
 }
