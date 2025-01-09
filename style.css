@@ -1,7 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    /* background-color: #111911; */
     background-color: brown;
 }
 
@@ -42,19 +41,9 @@ html, body {
 }
 
 #about-me-container {
-    /* background-color: #111911; */
     margin-top: 5rem;
-    /* margin-left: 5em;
-    margin-right: 5em; */
     position: relative;
-    /* height: 800px; */
-    /* width: 1200px; */
     z-index: 10;
-    /* flex-direction: row;
-    gap: 0;
-    align-items: center;
-    justify-content: center;
-    overflow-x: visible; */
 }
 
 #top-picture-container {
@@ -170,14 +159,11 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) ) ;
     gap: 4rem;
-    /* justify-items: center;
-    align-content: center; */
 }
 
 .card{
     height: auto;
     width: 100%;
-    background-color: aliceblue;
     filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.5));
 }
 
@@ -185,22 +171,16 @@ html, body {
     display: flex;
     flex-direction: column;
     color: black;
+    height: 100%;
 }
 
 .picture {
     height: 375px;
     width: 100%;
     overflow: hidden;
-    background-color: darkslateblue;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-.filler-text {
-    margin: 0;
-    font-size: 54px;
 }
 
 .project-description {
@@ -210,7 +190,7 @@ html, body {
     color: white;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
 }
 
 .project-title-container {
@@ -246,6 +226,7 @@ html, body {
 .description-container{
     margin: 0;
     width: 100%;
+    height: 100%;
 }
 
 .description-message{
@@ -303,7 +284,6 @@ html, body {
 .content-wrapper {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     word-break: break-word;
     margin-top: 1em;
@@ -396,6 +376,7 @@ html, body {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr) ) ;
         gap: 3rem;
+        grid-auto-rows: 1fr;
     }
     .title-icons {
         width: 25px;
@@ -403,16 +384,10 @@ html, body {
     .picture {
         height: 290px;
     }
-    .filler-text {
-        font-size: 48px;
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
     .icon {
         width: 35px;
     }
     .project-title-container {
-        /* background-color: white; */
         margin-top: 0.75rem;
         font-size: 24px;
     }
@@ -545,11 +520,6 @@ html, body {
     .picture {
         height: 250px;
         width: auto;
-    }
-    .filler-text {
-        font-size: 32px;
-        margin-left: 3rem;
-        margin-right: 3rem;
     }
     .project-description {
         min-height: 150px;
